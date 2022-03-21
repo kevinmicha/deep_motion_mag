@@ -99,7 +99,7 @@ def addNoiseToVideo(vidFname, vidFnameOut, maxFrames, noise_type, noise_param):
 ################# main script
 def main():
 
-    vidFname = 'guitar.avi'
+    vidFname = 'juguete-turbio.mp4'
     vidFolder = 'data/vids/'
 
     # maximum nr of frames to process
@@ -113,7 +113,7 @@ def main():
     # salt and pepper
     prob = 0.1 # for salt and pepper noise
     #uniform
-    max_u = 30
+    max_u = 20
 
     # output video filename
     output_folder = 'data/vids/'
