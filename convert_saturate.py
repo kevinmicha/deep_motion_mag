@@ -18,10 +18,14 @@ def frame_saturate(frame):
 def main():
 
     # path to folder with frames to convert
-    path = 'data/vids/juguete-turbio/'
+    
+    #video = 'guitar'
+    video = 'juguete-turbio'
+
+    path = 'data/vids/'+video+'/'
 
     # path to folder with grayscale frames
-    output_path = 'data/vids/juguete-turbio/sat/'
+    output_path = 'data/vids/'+video+'/sat/'
 
     # Check whether the specified path exists or not
     isExist = os.path.exists(output_path)
@@ -46,7 +50,7 @@ def main():
 
                 sat_frame = frame_saturate(frame)
 
-                name = output_path + '%d.png' % (count)
+                name = output_path + '%04d.png' % (count)
 
                 sat_frame.save(name)
 

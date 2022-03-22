@@ -26,10 +26,14 @@ def frame_to_grayscale(frame):
 def main():
 
     # path to folder with frames to convert
-    path = 'data/vids/juguete-turbio/'
+
+    #video = 'guitar'
+    video = 'juguete-turbio'
+
+    path = 'data/vids/'+video+'/'
 
     # path to folder with grayscale frames
-    output_path = 'data/vids/juguete-turbio/gs/'
+    output_path = 'data/vids/'+video+'/gs/'
 
     # Check whether the specified path exists or not
     isExist = os.path.exists(output_path)
@@ -53,7 +57,7 @@ def main():
 
                 gs_frame = frame_to_grayscale(frame)
 
-                name = output_path + '%d.png' % (count)
+                name = output_path + '%04d.png' % (count)
 
                 cv2.imwrite(name,gs_frame)
 
