@@ -8,6 +8,7 @@ __pycache__/
 checkpoints
 data
 logs
+tests.ipynb
 
 .__afs*
 *DS_Store
